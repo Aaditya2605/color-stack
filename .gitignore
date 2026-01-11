@@ -1,0 +1,17 @@
+# Godot 4.x
+.godot/
+# Import directory (Godot 4 uses .godot/import)
+# Included by .godot/ but kept for clarity
+.godot/import/
+
+# Export presets (optional if you don't want to commit them yet)
+export_presets.cfg
+
+# Mono/VSCode/JetBrains artifacts
+.mono/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
