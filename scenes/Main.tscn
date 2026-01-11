@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id=1]
+[ext_resource type="Script" path="res://scripts/BlockSpawner.gd" id=2]
+[ext_resource type="PackedScene" path="res://scenes/ActiveBlock.tscn" id=3]
+[ext_resource type="Script" path="res://scripts/TowerController.gd" id=4]
+[ext_resource type="PackedScene" path="res://scenes/TowerBlock.tscn" id=5]
+[ext_resource type="PackedScene" path="res://scenes/UI.tscn" id=6]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+size = Vector2(720, 1280)
+color = Color(0.08, 0.1, 0.14, 1)
+
+[node name="BlockSpawner" type="Node2D" parent="."]
+position = Vector2(360, 160)
+script = ExtResource(2)
+block_scene = ExtResource(3)
+
+[node name="Tower" type="Node2D" parent="."]
+position = Vector2(360, 1080)
+script = ExtResource(4)
+tower_block_scene = ExtResource(5)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource(1)
+block_spawn_path = NodePath("../BlockSpawner")
+tower_path = NodePath("../Tower")
+ui_path = NodePath("../UI")
+
+[node name="UI" parent="." instance=ExtResource(6)]

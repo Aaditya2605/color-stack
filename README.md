@@ -1,11 +1,11 @@
-# Color Stack
+# Color Stack Run
 
-A fast, satisfying color-stacking arcade game for iOS and Android.
+A one-finger, timing-based arcade game where you match the tower's Required Color to grow the stack.
 
 ## Core Loop
-- Tap to drop a colored tile onto the stack.
-- Match or blend colors to score combos.
-- Survive as the stack narrows and speed increases.
+- Required Color is shown.
+- A stationary block cycles colors at the top.
+- Tap to drop; match to grow, mismatch to shrink.
 
 ## Target Platforms
 - iOS (App Store)
@@ -17,3 +17,4 @@ A fast, satisfying color-stacking arcade game for iOS and Android.
 ## Project Structure
 - `scenes/`: Godot scenes.
 - `docs/`: Design and planning notes.
+- `scripts/`: GDScript game logic.
